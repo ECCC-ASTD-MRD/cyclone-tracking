@@ -1,0 +1,13 @@
+NAME       : cyclone-tracking
+VERSION    : 1.0.0
+BUILD      : Release
+STATE      : 
+DESCRIPTION: ECCC-MRD cyclone tracking tools 
+SUMMARY    :  
+MAINTAINER : Jean-Francois Caron - Jean-Francois.Caron@ec.gc.ca
+URL        : https://gitlab.science.gc.ca/jfc425/cyclone-tracking
+
+# Dependencies 
+#    =,<,<=,>,>= : Version rules
+#    ~           : Optional
+rmn >= 20.0.0

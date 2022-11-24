@@ -1,4 +1,4 @@
-#include <tracks_cte.h>
+#include "tracks_cte.h"
 
 c***********************************************************************
 c---- Sous-routine GLOBAL_OR_LAM                                     ---
@@ -1850,7 +1850,7 @@ c        On trouve les parametres de le grille source
 	 dlon=360.0/float(ni)
       else
          print*
-         print*,"Seulement les grilles globales de type A, B et L«" 
+         print*,"Seulement les grilles globales de type A, B et Lï¿½" 
          print*,"sont supportees!"
          print*
          stop 1

@@ -1,4 +1,4 @@
-#include <tracks_cte.h>
+#include "tracks_cte.h"
 
 c***********************************************************************
 c---- Sous-routine CALC_VCRIT
@@ -270,7 +270,7 @@ c     DAREA=2.*PI*RADIUS*DRAD*FLOAT(IDTHETA)/360.
      $           RADIUS*1.111E5)
             ier= gdxyfll(gdid, XP, YP, sslat, sslon, 1)
                   
-C     See if <20° lat
+C     See if <20ï¿½ lat
             ni_f=1.0*nj
             nj_f=1.0*ni
             IF( (ABS(SSLAT).GT.21.) .and. (yp.ge.1.) .and.
