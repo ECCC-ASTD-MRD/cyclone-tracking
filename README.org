@@ -83,6 +83,7 @@ git repo after having cloned.
 mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=${your_choice}
-make 
+make
+make test 
 make install
 #+end_src
