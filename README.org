@@ -1,7 +1,35 @@
+ECCC-CMC extra-tropical and tropical cyclone tracking algorithm for NWP
 
-Cyclone tracking tools
+** Algorithm description
 
-* At CMC
+This tracking algorithm is based on code originally developed by: 
+ - Sinclair, M. R., 1997: Objective identification of cyclones and their circulation intensity, and climatology. 
+   Wea. Forecasting, 12, 595-612. 
+
+E-T cyclones are tracked based on either their minimum central mean sea level pressure (MSLP) or 
+on their maximum values of gradient wind vorticity.
+
+For vorticity-based tracking, cyclones (i.e. vorticity maxima) must reach a given user-specified threshold value.
+Vorticity fields are smoothed using a Cressman filter to remove (real and ficticious) small scale details and 
+retain only the synoptic scale features.
+
+For pressure-based traking, cyclone centers are determined from filtered MSLP fields. 
+However, it is possible to extract the raw (i.e. unfiltered) minimum central pressure value.
+
+The tropical cyclone tracking algorithm uses the same core than the extra-tropical pressure-based tracking algorithm. 
+However, in order to identify cyclones with tropical characteristics, 4 additional parameters are considered:
+
+  a) 850-hPa relative vorticity filtered with a Cressman filter using a 300-km radius
+  b) 250-850 hPa thickness
+  c) Surface (10 m) wind speed
+  d) Low level baroclinicity (noted B) measured in terms of asymetry of the 600-900 hPa thickness field. 
+     The definition of B employed follows:
+      - Sinclair, M. R., 2004: Extratropical Transition of Southwest Pacific Tropical Cyclones. 
+        Part II: Midlatitude Circulation Characterisitcs, Mon. Wea. Rev., 132, p. 2149.
+
+Real-time applications using this algorithm can be found on https://meteocentre.com/cyclone-tracking/index_e.html
+
+* How to build the program at CMC
 
 ** Build dependencies
 
@@ -38,7 +66,7 @@ make
 make package
 #+end_src
 
-* Outside CMC (External users)
+* How to build the program outside CMC (External users)
 
 ** Build dependencies
 

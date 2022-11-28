@@ -19,6 +19,9 @@ include(ec_compiler_presets)
 include(ec_doxygen)
 ec_build_info()            # Generate build include file (optional)
 
+include(CTest)
+add_custom_target(check COMMAND CTEST_OUTPUT_ON_FAILURE=true ${CMAKE_CTEST_COMMAND})
+
 if (NOT rmn_FOUND)
    find_package(rmn ${rmn_REQ_VERSION} COMPONENTS shared REQUIRED)
 endif()
@@ -27,6 +30,7 @@ endif()
 set(CMAKE_Fortran_FLAGS "-ffixed-line-length-none -extend-source ${CMAKE_Fortran_FLAGS} ")
 
 add_subdirectory(src)
+add_subdirectory(test)
 
 #----- Generate the config file for the project to be usable via cmake's find_package command
 set(INCLUDE_INSTALL_DIR include)
