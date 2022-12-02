@@ -82,7 +82,7 @@ git repo after having cloned.
 #+begin_src
 mkdir build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=${your_choice}
+cmake .. -Drmn_ROOT=[librmn path] -DCMAKE_INSTALL_PREFIX=[install path]
 make
 make test 
 make install
