@@ -4,7 +4,7 @@ path=$(readlink -f $(dirname "${BASH_SOURCE[0]}"))
 
 DBASE="cyclone-tracking.dbase.tar.gz"
 DBASE_URL="http://collaboration.cmc.ec.gc.ca/science/outgoing/cyclone-tracking/${DBASE}"
-DBASE_MD5SUM="5710fae7f3896e9f1dbee3991fe90284"
+DBASE_MD5SUM="498b3c75d96340958687fbb317746308"
 
 checkMd5() {
     # $1 File path
