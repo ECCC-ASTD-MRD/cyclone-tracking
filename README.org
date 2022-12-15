@@ -87,3 +87,5 @@ make
 make test 
 make install
 #+end_src
+
+To run the test suite (make test), you will have to run the script =test/download-dbase.sh= first to import the test database.

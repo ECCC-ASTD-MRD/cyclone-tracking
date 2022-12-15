@@ -5,7 +5,7 @@ make_tracks=../../build/src/make_tracks
 # Note: The setup below follows the one used on
 #       https://meteocentre.com/cyclone-tracking/index_e.html
 
-nwpForecast=cmc-gdps-2022112312-000-120-na.fst
+nwpForecast=inputs/cmc-gdps-2022112312-000-120-na.fst
 
 # MSLP-based tracking
 rm -f track_cmc-gdps-2022112312_mslp.*
